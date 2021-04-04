@@ -1,5 +1,5 @@
 {
-  "name": "csstansition",
+  "name": "csstransition",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -12,7 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development --config webpack.config.dev.js",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build": "webpack --mode production --config webpack.config.js && rm -rf dist/",
     "prepublishOnly": "npm run build"
   },
   "author": "",
