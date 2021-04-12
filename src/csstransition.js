@@ -67,7 +67,7 @@ function csstransition(element, params={}){
     
                     if (!el._stage0) {
                         el._stage0 = true
-                        el._cssText = el.style.cssText
+                        el._style = el.getAttribute('style')
                         el._class = el.getAttribute('class')
                         el.clear = clear
                     }
@@ -120,13 +120,13 @@ function csstransition(element, params={}){
                     el = transition.element
                     
                     if (el._stage0) {
-                        el.style.cssText = el._cssText
+                        el._style ? el.setAttribute('style', el._style) : el.removeAttribute('style')
                         el._class ? el.setAttribute('class', el._class) : el.removeAttribute('class')
                         
                         delete(el._stage0)
-                        delete(el.clear)
-                        delete(el._cssText)
+                        delete(el._style)
                         delete(el._class)
+                        delete(el.clear)
                     }
                 }
 

@@ -1,7 +1,7 @@
-# csstransition
+# css-transition-rule
 
 ## intall
-`npm i csstransition`
+`npm i css-transition-rule`
 
 ## usage 
 `TODO`
