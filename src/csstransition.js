@@ -168,7 +168,6 @@ function csstransition(element, params={}){
 
 function doTransation(transition, state, resolve) {
     let tm, el, states
-    let resolved = false
     
     if (!transition) {
         return
@@ -182,25 +181,19 @@ function doTransation(transition, state, resolve) {
     states = transition.states
 
     setState(el, states[state])
-
+    
     if (state == 1) {
         try {
-            tm = parseFloat(getComputedStyle(el)['transitionDuration']) || 0.2
+            tm = parseFloat(getComputedStyle(el)['transitionDuration']) || 200
         } catch (error) {
-            tm = 0.2
+            tm = 200
         }
         
-        el.addEventListener('transitionend', onTransitionend)
         setTimeout(onTransitionend, tm * 1000)
     }
 
     function onTransitionend() {
-        el.removeEventListener('transitionend', onTransitionend)
-
-        if (!resolved) {
-            resolved = true
-            resolve()
-        }
+        resolve()
     }
 }
 
@@ -224,7 +217,7 @@ function setState(el, state) {
             el.style[prop] = replaceParams(value, params)
         })
     }
-
+    
     add(el, state.rule)
     
     state.callback && state.callback(el)
