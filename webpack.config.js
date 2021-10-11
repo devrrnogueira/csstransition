@@ -11,6 +11,14 @@ module.exports = {
         library: 'csstransition',
         libraryTarget: 'umd'
     },
+    module: {
+        rules: [
+          {
+                test: /\.css$/i,
+                use: ["css-loader"],
+          },
+        ],
+    }
     // plugins: [
     //     new HtmlWebpackPlugin({
     //         template: path.resolve(__dirname, "test", "index.html")

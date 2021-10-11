@@ -13,6 +13,14 @@ module.exports = {
             template: path.resolve(__dirname, "test", "index.html")
         })
     ],
+    module: {
+        rules: [
+          {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+          },
+        ],
+    },
     devServer: {
         port: 3001
     }
