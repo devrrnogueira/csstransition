@@ -1,5 +1,3 @@
-import { csstransition, TRANSITIONS } from '../src/csstransition'
-
 function doEffect(name) {
     let target = document.getElementById('target')
 
