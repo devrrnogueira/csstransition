@@ -1,27 +1,24 @@
 const path = require("path")
 
 module.exports = {
-    target: 'node',
-    entry: {
-        index: path.resolve(__dirname, "src", "csstransition.js")
-    },
+    mode: "development",
+    entry: path.resolve(__dirname, "src", "csstransition.js"),
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: 'index.js',
-        library: 'csstransition',
+        library: 'css-transition-rule',
         libraryTarget: 'umd'
     },
     module: {
         rules: [
-          {
+            {
                 test: /\.css$/i,
-                use: ["css-loader"],
-          },
+                use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.js$/i,
+                use: ["babel-loader"],
+            },
         ],
     }
-    // plugins: [
-    //     new HtmlWebpackPlugin({
-    //         template: path.resolve(__dirname, "test", "index.html")
-    //     })
-    // ]
 }

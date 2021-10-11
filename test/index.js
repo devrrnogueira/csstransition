@@ -1,4 +1,6 @@
-import { csstransition, TRANSITIONS } from '../src/csstransition'
+// import { csstransition, TRANSITIONS } from '../src/csstransition'
+
+import { csstransition, TRANSITIONS } from '../dist/index'
 
 function doEffect(name) {
     let target = document.getElementById('target')
@@ -9,7 +11,7 @@ function doEffect(name) {
             console.log('EXIT Complete')
 
             csstransition(target, name)
-                .enter(1000)
+                .enter(400)
                 .run(() => {
                     console.log('ENTER Complete')
                 }) 
