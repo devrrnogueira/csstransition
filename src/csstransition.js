@@ -2,27 +2,6 @@
 
 import './transitions.css'
 
-const TRANSITIONS = {
-    Fade: 'Fade',
-    Fall: 'Fall',
-    ScaleUp: 'ScaleUp',
-    HorizontalFlip3D: 'HorizontalFlip3D',
-    Newspaper: 'Newspaper',
-    SideFall: 'SideFall',
-    Sign3D: 'Sign3D',
-    SuperScale: 'SuperScale',
-    SlideFromRight: 'SlideFromRight',
-    SlideFromLeft: 'SlideFromLeft',
-    SlideFromBottom: 'SlideFromBottom',
-    SlideFromTop: 'SlideFromTop',
-    Slide_StickToTop: 'Slide_StickToTop',
-    VerticalFlip3D: 'VerticalFlip3D',
-}
-
-function csstransition(target = null, statesOrName = null){
-    return new CSSTransition(target, statesOrName)
-}
-
 class CSSTransition {
     /**
      * @param {Element} target?
@@ -350,7 +329,23 @@ function reflow() {
     void( document.documentElement.offsetHeight )
 }
 
-export {
-    csstransition,
-    TRANSITIONS
+export const TRANSITIONS = {
+    Fade: 'Fade',
+    Fall: 'Fall',
+    ScaleUp: 'ScaleUp',
+    HorizontalFlip3D: 'HorizontalFlip3D',
+    Newspaper: 'Newspaper',
+    SideFall: 'SideFall',
+    Sign3D: 'Sign3D',
+    SuperScale: 'SuperScale',
+    SlideFromRight: 'SlideFromRight',
+    SlideFromLeft: 'SlideFromLeft',
+    SlideFromBottom: 'SlideFromBottom',
+    SlideFromTop: 'SlideFromTop',
+    Slide_StickToTop: 'Slide_StickToTop',
+    VerticalFlip3D: 'VerticalFlip3D',
+}
+
+export function csstransition(target = null, statesOrName = null){
+    return new CSSTransition(target, statesOrName)
 }

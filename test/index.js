@@ -1,6 +1,4 @@
-// import { csstransition, TRANSITIONS } from '../src/csstransition'
-
-import { csstransition, TRANSITIONS } from '../dist/index'
+import { csstransition, TRANSITIONS } from '../src/csstransition'
 
 function doEffect(name) {
     let target = document.getElementById('target')
