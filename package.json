@@ -15,7 +15,6 @@
     "dev": "webpack serve --mode development --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.js",
     "prepublishOnly": "rm -rf dist/ && npm run build && cp src/* dist/ && mv dist/csstransition.js dist/index.js",
-    "postpublish": "rm -rf dist/",
     "viewuser": "npm whoami"
   },
   "author": "Dev RR Nogueira",

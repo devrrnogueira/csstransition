@@ -1,0 +1,226 @@
+/*
+    @credits https://tympanus.net/Development/ModalWindowEffects/
+*/
+
+/* Fade */
+.transition__Fade__enter {
+    opacity: 0!important;
+}
+.transition__Fade__enter-active {
+    transition: opacity .3s!important;
+    opacity: 1!important;
+}
+.transition__Fade__exit-active {
+    transition: opacity .3s!important;
+    opacity: 0!important;
+}
+
+/* ScaleUp */
+.transition__ScaleUp__enter {
+    opacity: 0!important;
+    transform: scale(.7)!important;
+}
+.transition__ScaleUp__enter-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 1!important;
+    transform: scale(1)!important;
+}
+.transition__ScaleUp__exit-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 0!important;
+    transform: scale(.7)!important;
+}
+
+/* SlideFromRight */
+.transition__SlideFromRight__enter {
+    opacity: 0!important;
+    transform: translateX(20%)!important;
+}
+.transition__SlideFromRight__enter-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 1!important;
+    transform: translateX(0)!important;
+}
+.transition__SlideFromRight__exit-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 0!important;
+    transform: translateX(20%)!important;
+}
+
+/* SlideFromLeft */
+.transition__SlideFromLeft__enter {
+    opacity: 0!important;
+    transform: translateX(-20%)!important;
+}
+.transition__SlideFromLeft__enter-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 1!important;
+    transform: translateX(0)!important;
+}
+.transition__SlideFromLeft__exit-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 0!important;
+    transform: translateX(-20%)!important;
+}
+
+/* SlideFromBottom */
+.transition__SlideFromBottom__enter {
+    opacity: 0!important;
+    transform: translateY(20%)!important;
+}
+.transition__SlideFromBottom__enter-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 1!important;
+    transform: translateY(0)!important;
+}
+.transition__SlideFromBottom__exit-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 0!important;
+    transform: translateY(20%)!important;
+}
+
+/* SlideFromTop */
+.transition__SlideFromTop__enter {
+    opacity: 0!important;
+    transform: translateY(-20%)!important;
+}
+.transition__SlideFromTop__enter-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 1!important;
+    transform: translateY(0)!important;
+}
+.transition__SlideFromTop__exit-active {
+    transition: opacity .3s, transform .3s!important;
+    opacity: 0!important;
+    transform: translateY(-20%)!important;
+}
+
+/* Newspaper */
+.transition__Newspaper__enter {
+    opacity: 0!important;
+    transform: scale(0) rotate(720deg)!important;
+}
+.transition__Newspaper__enter-active {
+    transition: opacity .5s, transform .5s!important;
+    opacity: 1!important;
+    transform: scale(1) rotate(0)!important;
+}
+.transition__Newspaper__exit-active {
+    transition: opacity .5s, transform .5s!important;
+    opacity: 0!important;
+    transform: scale(0) rotate(720deg)!important;
+}
+
+/* Fall */
+.transition__Fall__enter {
+    transform: perspective(1200px) rotateX(30deg) scale(1.5)!important;
+    opacity: 0!important;
+}
+.transition__Fall__enter-active {
+    transition: opacity .2s ease-in, transform .3s ease-in!important;
+	transform: none!important;
+    opacity: 1!important;
+}
+.transition__Fall__exit-active {
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in!important;
+    transform: perspective(1200px) rotateX(30deg) scale(1.5)!important;
+    opacity: 0!important;
+}
+
+/* SideFall */
+.transition__SideFall__enter {
+    transform: translate(30%) translateZ(600px) rotate(10deg) scale(1.3)!important;
+    opacity: 0!important;
+}
+.transition__SideFall__enter-active {
+    transition: opacity .2s ease-in, transform .3s ease-in!important;
+	transform: none!important;
+    opacity: 1!important;
+}
+.transition__SideFall__exit-active {
+    transition: opacity 0.2s ease-in, transform 0.3s ease-in!important;
+    transform: translate(30%) translateZ(600px) rotate(10deg) scale(1.3)!important;
+    opacity: 0!important;
+}
+
+/* Slide_StickToTop */
+.transition__Slide_StickToTop__enter {
+    transform: translateY(-50%)!important;
+    opacity: 0!important;
+}
+.transition__Slide_StickToTop__enter-active {
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in!important;
+	transform: translateY(0)!important;
+    opacity: 1!important;
+}
+.transition__Slide_StickToTop__exit-active {
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in!important;
+    transform: translateY(-50%)!important;
+    opacity: 0!important;
+}
+
+/* HorizontalFlip3D */
+.transition__HorizontalFlip3D__enter {
+    transform: perspective(1200px) rotateY(-70deg)!important;
+    opacity: 0!important;
+}
+.transition__HorizontalFlip3D__enter-active {
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in!important;
+	transform: none!important;
+    opacity: 1!important;
+}
+.transition__HorizontalFlip3D__exit-active {
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in!important;
+    transform: perspective(1200px) rotateY(-70deg)!important;
+    opacity: 0!important;
+}
+
+/* VerticalFlip3D */
+.transition__VerticalFlip3D__enter {
+    transform: perspective(1200px) rotateX(-70deg)!important;
+    opacity: 0!important;
+}
+.transition__VerticalFlip3D__enter-active {
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in!important;
+	transform: none!important;
+    opacity: 1!important;
+}
+.transition__VerticalFlip3D__exit-active {
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in!important;
+    transform: perspective(1200px) rotateX(-70deg)!important;
+    opacity: 0!important;
+}
+
+/* Sign3D */
+.transition__Sign3D__enter {
+    transform: perspective(1300px) rotateX(-60deg)!important;
+    transform-origin: 50% 0;
+    opacity: 0!important;
+}
+.transition__Sign3D__enter-active {
+    transition: opacity .3s ease-in, transform .3s ease-in!important;
+	transform: none!important;
+    opacity: 1!important;
+}
+.transition__Sign3D__exit-active {
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in!important;
+    transform: perspective(1300px) rotateX(-60deg)!important;
+    transform-origin: 50% 0;
+    opacity: 0!important;
+}
+
+/* SuperScale */
+.transition__SuperScale__enter {
+    transform: scale(1.5)!important;
+    opacity: 0!important;
+}
+.transition__SuperScale__enter-active {
+    transition: opacity .3s, transform .3s!important;
+	transform: scale(1)!important;
+    opacity: 1!important;
+}
+.transition__SuperScale__exit-active {
+    transition: opacity 0.3s, transform 0.3s!important;
+    transform: scale(1.5)!important;
+    opacity: 0!important;
+}
