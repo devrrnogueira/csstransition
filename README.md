@@ -4,7 +4,7 @@
 You can see a demo [here](https://devrrnogueira.github.io/csstransition/) 
 
 ## intall
-`npm i csstransition`
+`npm i css-transition-rule`
 
 ## usage 
 ``` html
