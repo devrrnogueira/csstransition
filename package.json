@@ -1,6 +1,6 @@
 {
   "name": "css-transition-rule",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple css transitions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
