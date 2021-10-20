@@ -113,6 +113,10 @@ class CSSTransition {
         let canceled = false
         let transitions = this._activeTransitions
 
+        if (existsTargetNull()) {
+            complete && complete()
+        }
+
         state0()
         reflow()
 
@@ -207,6 +211,11 @@ class CSSTransition {
             if  (last && complete) {
                 complete(cancel)
             }
+        }
+
+        function existsTargetNull() {
+            let existsNull = transitions.findIndex(({target}) => !target) > -1
+            return existsNull
         }
     }
 
